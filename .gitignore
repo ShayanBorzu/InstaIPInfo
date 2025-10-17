@@ -1,0 +1,60 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Python-specific ignores
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+
+# macOS files
+.DS_Store
+
+# Logs and SQLite database (if any)
+*.log
+*.sqlite3
+
+# Environment variables file (if you use one)
+.env
+
+# Coverage reports
+htmlcov/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+
+# mypy type checker
+.mypy_cache/
+
+# pytest local cache
+.pytest_cache/
+
+# pytest debugging
+.pytest_cache/
+
+# pycharm
+.idea/
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints
+
+# Ignore sensitive vault or secrets files if any
+vault.py
