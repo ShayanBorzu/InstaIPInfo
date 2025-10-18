@@ -9,14 +9,17 @@ app = FastAPI()
 async def read_root():
     return {"message": "Hello, I'm Working!"}
 
+
+# Endpoint to get Instagram profile info by username
 @app.get("/instagram_username/{username}")
-async def instagram_id(username: str):
+async def instagram_username(username: str):
     try:
         info = await public_info(username)
         return JSONResponse(content=info)
     except Exception as e:
         raise HTTPException(status_code=400, detail=str(e))
 
+# Endpoint to get IP information
 @app.get("/ip_information/{ip}")
 async def ip_information(ip: str):
     url = f"https://ipapi.co/{ip}/json/"

@@ -3,12 +3,14 @@ import base64
 from httpx import BasicAuth
 from vault import boxapi_username, boxapi_password
 
-async def image_url_to_base64(url: str) -> str:
+# Internal helper function to convert image URL to base64
+async def image_url_to_base64(url: str) -> str: 
     async with httpx.AsyncClient() as client:
         response = await client.get(url, timeout=30)
         response.raise_for_status()
         return base64.b64encode(response.content).decode("utf-8")
 
+# Main function to get public Instagram profile info
 async def public_info(username: str) -> dict:
     url = "https://boxapi.ir/api/instagram/user/get_web_profile_info"
     auth = BasicAuth(boxapi_username, boxapi_password)

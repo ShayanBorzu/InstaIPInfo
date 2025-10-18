@@ -5,10 +5,18 @@ Asynchronous FastAPI backend service for Instagram profile information (boxapi.i
 ## Installation
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/ShayanBorzu/InstaIPInfo
+```
+```bash
 cd your-project
+```
+```bash
 python -m venv venv
+```
+```bash
 source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+```bash
 pip install -r requirements.txt
 ```
 
@@ -32,7 +40,7 @@ uvicorn main:app --reload
 **Request:**
 
 ```
-GET http://127.0.0.1:8000/instagram_username/{username}
+GET http://127.0.0.1:8000/instagram_username/google
 ```
 
 **Response example:**
@@ -53,7 +61,7 @@ GET http://127.0.0.1:8000/instagram_username/{username}
 **Request:**
 
 ```
-GET http://127.0.0.1:8000/ip_information/{ip}
+GET http://127.0.0.1:8000/ip_information/8.8.8.8
 ```
 
 **Response example:**
