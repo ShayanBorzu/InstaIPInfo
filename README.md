@@ -1,6 +1,6 @@
 # InstaIPInfo
 
-Asynchronous FastAPI backend service for Instagram profile information (boxapi.ir) and IP geolocation data retrieval (ipapi.co).
+Asynchronous FastAPI backend service for Instagram profile information (boxapi.ir) and IP geolocation data retrieval (ipapi.co, abstractapi.com, ipgeolocation.io 80,000 req/month).
 
 ## Installation
 
@@ -25,6 +25,10 @@ Create a file named `vault.py` with these variables:
 ```python
 boxapi_username = 'your_boxapi_username'
 boxapi_password = 'your_boxapi_password'
+
+ABSTRACTAPI_TOKEN = 'your_abstractapi_token' # abstractapi.com
+
+IPGEOLOCATION_TOKEN = 'your_ipgeolocation_token' # ipgeolocation.io
 ```
 
 ## Usage
@@ -69,32 +73,14 @@ GET http://127.0.0.1:8000/ip_information/8.8.8.8
 ```json
 {
   "ip": "8.8.8.8",
-  "network": "8.8.8.0/24",
-  "version": "IPv4",
-  "city": "Mountain View",
-  "region": "California",
-  "region_code": "CA",
-  "country": "US",
+  "org": "GOOGLE",
   "country_name": "United States",
-  "country_code": "US",
-  "country_code_iso3": "USA",
-  "country_capital": "Washington",
-  "country_tld": ".us",
-  "continent_code": "NA",
-  "in_eu": false,
-  "postal": "94043",
+  "region": "California",
+  "city": "Mountain View",
   "latitude": 37.42301,
   "longitude": -122.083352,
   "timezone": "America/Los_Angeles",
-  "utc_offset": "-0700",
-  "country_calling_code": "+1",
-  "currency": "USD",
-  "currency_name": "Dollar",
-  "languages": "en-US,es-US,haw,fr",
-  "country_area": 9629091,
-  "country_population": 327167434,
-  "asn": "AS15169",
-  "org": "GOOGLE"
+  "information_source": "ipapi.co"
 }
 ```
 
